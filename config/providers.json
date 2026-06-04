@@ -1,0 +1,68 @@
+{
+  "base_notes": "Provider publik. OCR Cleaner memakai provider cepat; jawaban akhir OCR diprioritaskan ke Claude. Repository target: https://github.com/rhteaster-ui/Agen-clipboard",
+  "providers": {
+    "claude": {
+      "url": "https://api.nexray.eu.cc/ai/claude",
+      "method": "GET",
+      "message_param": "text",
+      "params": {},
+      "extract": "result",
+      "role": "Final solver utama, jawaban akhir OCR, alasan, SD/SMP/SMA, formal"
+    },
+    "gemini": {
+      "url": "https://api.nexray.eu.cc/ai/gemini",
+      "method": "GET",
+      "message_param": "text",
+      "params": {},
+      "extract": "result",
+      "role": "Fallback umum dan OCR cleaner"
+    },
+    "kimi": {
+      "url": "https://api.nexray.eu.cc/ai/kimi",
+      "method": "GET",
+      "message_param": "text",
+      "params": {},
+      "extract": "result",
+      "role": "Bahasa natural, pembahasan, fallback"
+    },
+    "chatgpt": {
+      "url": "https://api.nexray.eu.cc/ai/gpt-3.5-turbo",
+      "method": "GET",
+      "message_param": "text",
+      "params": {},
+      "extract": "result",
+      "role": "Fallback cepat dan form"
+    },
+    "copilot": {
+      "url": "https://api-nanzz.my.id/docs/api/ai/copilot.php",
+      "method": "GET",
+      "message_param": "q",
+      "params": {},
+      "extract": "result.text",
+      "role": "Rewrite, ringkas, WhatsApp, parafrase"
+    }
+  },
+  "routes": {
+    "default": ["claude", "gemini", "kimi", "chatgpt"],
+    "form": ["claude", "gemini", "kimi", "chatgpt"],
+    "pilihanganda": ["claude", "gemini", "kimi", "chatgpt"],
+    "opsi": ["claude", "gemini", "kimi", "chatgpt"],
+    "singkat": ["claude", "gemini", "kimi", "chatgpt"],
+    "sedang": ["claude", "gemini", "kimi", "chatgpt"],
+    "lengkap": ["claude", "gemini", "kimi", "chatgpt"],
+    "bahas": ["claude", "gemini", "kimi", "chatgpt"],
+    "alasan": ["claude", "gemini", "kimi", "chatgpt"],
+    "sd": ["claude", "gemini", "kimi", "chatgpt"],
+    "smp": ["claude", "gemini", "kimi", "chatgpt"],
+    "sma": ["claude", "gemini", "kimi", "chatgpt"],
+    "formal": ["claude", "gemini", "kimi", "chatgpt"],
+    "code": ["claude", "gemini", "kimi", "chatgpt"],
+    "math": ["claude", "gemini", "kimi", "chatgpt"],
+    "wa": ["copilot", "claude", "kimi", "chatgpt"],
+    "ringkas": ["copilot", "claude", "kimi", "chatgpt"],
+    "rewrite": ["copilot", "claude", "kimi", "chatgpt"],
+    "ocrclean": ["gemini", "chatgpt", "kimi", "claude"],
+    "ocranswer": ["claude", "gemini", "kimi", "chatgpt"],
+    "ocrbahas": ["claude", "gemini", "kimi", "chatgpt"]
+  }
+}

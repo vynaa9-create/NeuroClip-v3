@@ -1,0 +1,29 @@
+NeuroClip V4.0.1 Quick Start
+
+1. Install dependency:
+   pkg update -y
+   pkg install nodejs termux-api tesseract -y
+   termux-setup-storage
+
+2. Install NeuroClip:
+   bash scripts/setup-termux.sh
+
+3. Start:
+   neuro on
+   neuro status
+
+4. Clipboard flow:
+   salin teks -> notif -> Jawab/Balas
+
+5. OCR flow:
+   screenshot -> notif OCR -> Jawab/Balas/Salin
+
+6. Stop:
+   neuro off
+
+Useful commands:
+   neuro restart
+   neuro clear-flow
+   neuro log
+   neuro ocr-log
+   neuro doctor

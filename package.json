@@ -1,0 +1,31 @@
+{
+  "name": "agen-clipboard-neuroclip",
+  "version": "4.0.2",
+  "description": "Clipboard + Screenshot OCR AI copilot for Android Termux with stable Clip/OCR supervisor, routed state, modular notifications, and OCR action menu. v4.0.2: Critical stability fixes for watcher crash handling and state consistency.",
+  "type": "module",
+  "main": "src/cli.mjs",
+  "bin": {
+    "neuro": "bin/neuro"
+  },
+  "scripts": {
+    "check": "node --check src/core.mjs && node --check src/cli.mjs && node --check src/cli-base.mjs && node --check src/neuro-service.mjs && node --check src/supervisor.mjs && node --check src/watch-confirm.mjs && node --check src/watch-screenshot.mjs && node --check src/ss-watch.mjs && node --check src/flow-state.mjs && node --check src/copy-ocr.mjs && node --check src/watch.mjs && node --check src/server.mjs && node --check src/ocr-utils.mjs && node --check src/ocr-scan.mjs && node --check src/ocr-answer.mjs && node --check src/answer.mjs && node --check src/smart-answer.mjs && node --check src/reply.mjs && node --check src/menu.mjs && node --check src/reason.mjs && node --check src/view.mjs && node --check src/close.mjs && node --check src/reset.mjs && node --check src/mode.mjs",
+    "start": "node src/cli.mjs on",
+    "run": "node src/cli.mjs run",
+    "status": "node src/cli.mjs status"
+  },
+  "keywords": [
+    "termux",
+    "clipboard",
+    "android",
+    "ai",
+    "automation",
+    "notification",
+    "agent"
+  ],
+  "author": "rhteaster-ui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhteaster-ui/Agen-clipboard.git"
+  }
+}
